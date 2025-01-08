@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon ./src/index.ts",
     "start":"node index.js",
-    "postinstall": "prisma generate"
+    "generate": "npx prisma generate",
+    "deploy": "npx prisma migrate deploy"
   },
   "author": "Brijesh",
   "license": "ISC",
