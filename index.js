@@ -199,4 +199,4 @@ io.on("connection", (socket) => {
         }
     }));
 });
-server.listen(8080, () => console.log("server started"));
+server.listen(process.env.PORT||8080,()=>console.log("server started"));
