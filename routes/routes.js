@@ -11,4 +11,7 @@ const router = (0, express_1.Router)();
 router.post("/api/signup", createUser_1.default);
 router.post("/api/updateroom", updateRoomData_1.default);
 router.post("/api/checkadminstatus", checkAdminStatus_1.checkAdminStatus);
+router.get("/api/health",async(req,res)=>{
+    res.send("HEALTH STATUS:OK")
+})
 exports.default = router;
