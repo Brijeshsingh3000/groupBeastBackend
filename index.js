@@ -50,7 +50,7 @@ const redisPub = new ioredis_1.Redis(redis_client);
 const redisSub = new ioredis_1.Redis(redis_client);
 //RAtE LIMITER INITIALIZATION
 const rateLimiter = (0, rateLimiter_1.createRateLimiter)({
-    maxRequest: 5,
+    maxRequest: 10,
     maxTimeWindow: 10,
     redisClient: redisPub
 });
