@@ -22,6 +22,8 @@ const rateLimiter_1 = require("./utility/rateLimiter");
 const dotenv_1 = __importDefault(require("dotenv"));
 const app = (0, express_1.default)();
 const server = http_1.default.createServer(app);
+dotenv_1.default.config();
+
 ///cors setting 
 app.use((0, cors_1.default)({
     origin: process.env.CLIENT_URL, // Allows requests from this frontend URL
@@ -34,7 +36,6 @@ const io = new socket_io_1.Server(server, {
         methods: ["GET", "POST", "PUT", "DELETE"]
     }
 });
-dotenv_1.default.config();
 app.options('*', (0, cors_1.default)());
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
